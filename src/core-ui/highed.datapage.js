@@ -136,7 +136,7 @@ highed.DataPage = function(parent, options, chartPreview, chartFrame, props) {
     }),
     
     highed.dom.on(dataClearBtn, 'click', function() {
-      if (confirm('Start from scratch?')) {
+      if (confirm(highed.getLocalizedStr('restartChart'))) {
         dataTable.clearData();
         assignDataPanel.init();
       }

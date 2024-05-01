@@ -83,7 +83,7 @@ highed.DrawerEditor = function(parent, options, planCode, chartType) {
     builtInOptions = {
       data: {
         icon: 'fa-table',
-        title: 'Data',
+        title: highed.getLocalizedStr('data.title'),
         widths: {
           desktop: 66,
           tablet: 64,
@@ -91,34 +91,29 @@ highed.DrawerEditor = function(parent, options, planCode, chartType) {
         },
         nav: {
           icon: 'table',
-          text: 'Data',
+          text: highed.getLocalizedStr('data.title'),
           onClick: []
         },
         help: [
           {
-            title: 'Manually Add/Edit Data',
+            title: highed.getLocalizedStr('data.help.manual.title'),
             gif: 'dataImport.gif',
             description: [
-              'Click a cell to edit its contents.<br/><br/>',
-              'The cells can be navigated using the arrow keys.<br/><br/>',
-              'Pressing Enter creates a new row, or navigates to the row directly below the current row.'
+              highed.getLocalizedStr('data.help.manual')
             ]
           },
           {
-            title: 'Setting headings',
+            title: highed.getLocalizedStr('data.help.headings.title'),
             gif: 'dataImport.gif',
             description: [
-              'The headings are used as the series titles.<br/><br/>',
-              'They can be edited by left clicking them.<br/><br/>',
-              'Click the arrow symbol in the header to access column properties.'
+              highed.getLocalizedStr('data.help.headings')
             ]
           },
           {
-            title: 'Importing Data',
+            title: highed.getLocalizedStr('data.help.importing.title'),
             gif: 'import.gif',
             description: [
-              'To import data, simply drag and drop CSV files onto the table, or paste CSV/Excel data into any cell.<br/><br/>',
-              'For more advanced data import, click the IMPORT DATA button.'
+              highed.getLocalizedStr('data.help.importing')
             ]
           }
         ],
@@ -131,30 +126,30 @@ highed.DrawerEditor = function(parent, options, planCode, chartType) {
           tablet: 24,
           phone: 100
         },
-        title: 'Templates',
+        title: highed.getLocalizedStr('stepTemplates'),
         nav: {
           icon: 'chart-bar',
-          text: 'Templates',
+          text: highed.getLocalizedStr('stepTemplates'),
           onClick: []
         },
         help: [
           {
-            title: 'Templates',
+            title: highed.getLocalizedStr('stepTemplates'),
             description: [
-              'Templates are pre-defined bundles of configuration.<br/><br/>',
-              'Start by choosing the template category in the list to the left,',
-              'then pick a suitable template for your data and use case in the',
-              'template list.'
+              highed.getLocalizedStr('templates.help1'),
+              highed.getLocalizedStr('templates.help2'),
+              highed.getLocalizedStr('templates.help3'),
+              highed.getLocalizedStr('templates.help4'),
             ]
           }
         ]
       },
       customize: {
         icon: 'chart-pie',
-        title: 'Customize Chart',
+        title: highed.getLocalizedStr('customize.title'),
         nav: {
           icon: 'chart-pie',
-          text: 'Customize',
+          text: highed.getLocalizedStr('customize.title'),
           onClick: []
         },
         widths: {
@@ -164,13 +159,13 @@ highed.DrawerEditor = function(parent, options, planCode, chartType) {
         },
         help: [
           {
-            title: 'Customize',
+            title: highed.getLocalizedStr('customize.title'),
             description: [
-              'The customize pane lets you customize your chart.<br/><br/>',
-              'The customizer has three different sections:<br/>',
-              '<li>Simple: A simple customizer with the most used options</li>',
-              '<li>Advanced: All options available in Highcharts/Highstock can be set here</li>',
-              '<li>Custom code: Here, properties can be overridden programatically</li>'
+              highed.getLocalizedStr('customize.help1'),
+              highed.getLocalizedStr('customize.help2'),
+              highed.getLocalizedStr('customize.help3'),
+              highed.getLocalizedStr('customize.help4'),
+              highed.getLocalizedStr('customize.help5'),
             ]
           }
         ]
@@ -316,7 +311,7 @@ highed.DrawerEditor = function(parent, options, planCode, chartType) {
         }
       },
       {
-        title: highed.L('openProject'),
+        title: highed.L('loadProject'),
         css: 'fa-folder-open',
         click: function() {
           highed.readLocalFile({
